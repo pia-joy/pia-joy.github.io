@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>超详细Hexo安装教程（全系统适配，新手零踩坑）</title>
+      <link href="/posts/8b1bf3f8.html"/>
+      <url>/posts/8b1bf3f8.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="零基础安装-Hexo-完整教程"><a href="#零基础安装-Hexo-完整教程" class="headerlink" title="零基础安装 Hexo 完整教程"></a>零基础安装 Hexo 完整教程</h1><p>Hexo 是一款基于 Node.js 的快速、简洁且高效的静态博客框架，支持 Markdown 语法，只需简单命令即可生成精美静态页面，搭配 GitHub Pages 可免费搭建个人博客，无需服务器、零成本上线。本文以 <strong>Windows 系统</strong> 为例，带你一步步完成 Hexo 安装与本地初始化。</p><h2 id="一、安装前准备（必备环境）"><a href="#一、安装前准备（必备环境）" class="headerlink" title="一、安装前准备（必备环境）"></a>一、安装前准备（必备环境）</h2><p>Hexo 运行依赖两个核心工具，<strong>必须先安装</strong>，否则无法正常使用：</p><ol><li><strong>Node.js</strong>（≥14.0 版本，推荐 LTS 稳定版）</li><li><strong>Git</strong>（版本管理工具，用于后续部署）</li></ol><h3 id="1-安装-Node-js"><a href="#1-安装-Node-js" class="headerlink" title="1. 安装 Node.js"></a>1. 安装 Node.js</h3><ul><li>打开 Node.js 官网：<a href="https://nodejs.org/">https://nodejs.org/</a></li><li>下载 <strong>LTS 长期支持版</strong>（左侧绿色按钮），一路默认安装即可。</li><li>验证安装：按下 <code>Win+R</code> 输入 <code>cmd</code> 打开命令提示符，执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li><li>出现版本号即安装成功。</li></ul><h3 id="2-安装-Git"><a href="#2-安装-Git" class="headerlink" title="2. 安装 Git"></a>2. 安装 Git</h3><ul><li>打开 Git 官网：<a href="https://git-scm.com/">https://git-scm.com/</a></li><li>下载对应系统版本，默认安装即可。</li><li>验证安装：在 cmd 执行：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></li><li>出现版本号即安装成功。</li></ul><hr><h2 id="二、全局安装-Hexo-命令行工具"><a href="#二、全局安装-Hexo-命令行工具" class="headerlink" title="二、全局安装 Hexo 命令行工具"></a>二、全局安装 Hexo 命令行工具</h2><p>环境准备完毕后，<strong>以管理员身份打开 cmd</strong>（避免权限报错），执行安装命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><ul><li>等待安装完成，执行验证命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure></li><li>显示 Hexo 版本信息（如 <code>hexo-cli: 4.3.0</code>），代表 Hexo 安装成功！</li></ul><hr><h2 id="三、初始化-Hexo-博客项目"><a href="#三、初始化-Hexo-博客项目" class="headerlink" title="三、初始化 Hexo 博客项目"></a>三、初始化 Hexo 博客项目</h2><ol><li>新建一个空文件夹（如 <code>D:\my-blog</code>），作为博客根目录。</li><li>在文件夹内<strong>按住 Shift + 右键</strong>，选择「在此处打开命令窗口」或「Open Git Bash here」。</li><li>执行初始化命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure></li><li>初始化完成后，安装项目依赖：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="四、本地启动-Hexo-博客"><a href="#四、本地启动-Hexo-博客" class="headerlink" title="四、本地启动 Hexo 博客"></a>四、本地启动 Hexo 博客</h2><ol><li>生成静态页面：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></li><li>启动本地服务器：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></li><li>打开浏览器，访问：<code>http://localhost:4000</code></li><li>看到 Hexo 默认页面，恭喜你！<strong>Hexo 安装与本地搭建全部完成</strong>。</li></ol><hr><h2 id="五、常用-Hexo-命令（收藏备用）"><a href="#五、常用-Hexo-命令（收藏备用）" class="headerlink" title="五、常用 Hexo 命令（收藏备用）"></a>五、常用 Hexo 命令（收藏备用）</h2><ul><li><code>hexo init 文件夹名</code>：初始化博客</li><li><code>hexo new &quot;文章标题&quot;</code>：新建文章</li><li><code>hexo generate / hexo g</code>：生成静态页面</li><li><code>hexo server / hexo s</code>：启动本地服务</li><li><code>hexo clean</code>：清理缓存文件（页面异常时使用）</li></ul><hr><h2 id="六、常见问题解决"><a href="#六、常见问题解决" class="headerlink" title="六、常见问题解决"></a>六、常见问题解决</h2><ol><li><strong>npm 安装慢</strong>：切换淘宝镜像<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure></li><li><strong>权限报错</strong>：关闭 cmd，重新以<strong>管理员身份</strong>运行。</li><li><strong>端口被占用</strong>：指定端口启动<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 另一个端口号</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我在部署hexo时遇到的报错</title>
       <link href="/posts/586c78bf.html"/>
       <url>/posts/586c78bf.html</url>
