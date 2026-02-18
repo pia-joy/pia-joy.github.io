@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>超详细Hexo安装教程（全系统适配，新手零踩坑）</title>
+      <title>超详细Hexo安装教程（新手零踩坑）#2</title>
+      <link href="/posts/e176d6c7.html"/>
+      <url>/posts/e176d6c7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Mac-系统从零安装-Hexo-完整教程（保姆级）"><a href="#Mac-系统从零安装-Hexo-完整教程（保姆级）" class="headerlink" title="Mac 系统从零安装 Hexo 完整教程（保姆级）"></a>Mac 系统从零安装 Hexo 完整教程（保姆级）</h1><p>Hexo 是基于 Node.js 的静态博客框架，Mac 环境下安装非常清爽，全程用终端即可完成。下面一步步带你装好并跑起来。</p><h2 id="一、先安装必备环境"><a href="#一、先安装必备环境" class="headerlink" title="一、先安装必备环境"></a>一、先安装必备环境</h2><p>Hexo 只依赖两个东西：<strong>Node.js</strong> + <strong>Git</strong>。</p><h3 id="1-安装-Homebrew（推荐）"><a href="#1-安装-Homebrew（推荐）" class="headerlink" title="1. 安装 Homebrew（推荐）"></a>1. 安装 Homebrew（推荐）</h3><p>打开 Mac 自带的 <strong>「终端」</strong>，先装 Homebrew（后面装软件超方便）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure><h3 id="2-用-brew-安装-Node-js-和-Git"><a href="#2-用-brew-安装-Node-js-和-Git" class="headerlink" title="2. 用 brew 安装 Node.js 和 Git"></a>2. 用 brew 安装 Node.js 和 Git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node git</span><br></pre></td></tr></table></figure><p>安装完检查一下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure><p>出现版本号就说明成功了。</p><hr><h2 id="二、安装-Hexo"><a href="#二、安装-Hexo" class="headerlink" title="二、安装 Hexo"></a>二、安装 Hexo</h2><p>继续在终端执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>验证：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure><p>能看到 hexo 版本信息就 OK。</p><hr><h2 id="三、初始化你的博客"><a href="#三、初始化你的博客" class="headerlink" title="三、初始化你的博客"></a>三、初始化你的博客</h2><ol><li>先找个地方放博客文件，比如在<strong>桌面</strong>建一个文件夹：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Desktop</span><br><span class="line"><span class="built_in">mkdir</span> my-hexo-blog</span><br><span class="line"><span class="built_in">cd</span> my-hexo-blog</span><br></pre></td></tr></table></figure><ol start="2"><li>初始化 Hexo：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><ol start="3"><li>安装依赖：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><hr><h2 id="四、本地运行-Hexo"><a href="#四、本地运行-Hexo" class="headerlink" title="四、本地运行 Hexo"></a>四、本地运行 Hexo</h2><ol><li>生成静态文件：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line"><span class="comment"># 简写</span></span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure><ol start="2"><li>启动本地服务：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line"><span class="comment"># 简写</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><ol start="3"><li>打开浏览器访问：</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:4000</span><br></pre></td></tr></table></figure><p>看到 Hexo 默认页面，说明<strong>安装成功</strong>！</p><hr><h2 id="五、常用命令总结"><a href="#五、常用命令总结" class="headerlink" title="五、常用命令总结"></a>五、常用命令总结</h2><ul><li><code>hexo new &quot;文章标题&quot;</code> → 新建文章</li><li><code>hexo g</code> → 生成页面</li><li><code>hexo s</code> → 本地预览</li><li><code>hexo clean</code> → 清理缓存（页面异常时用）</li></ul><hr><h2 id="六、常见小问题"><a href="#六、常见小问题" class="headerlink" title="六、常见小问题"></a>六、常见小问题</h2><ol><li>权限报错<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li><li>端口被占用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s -p 4001</span><br></pre></td></tr></table></figure></li><li>安装很慢<br>切换镜像：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>超详细Hexo安装教程（新手零踩坑）#1</title>
       <link href="/posts/8b1bf3f8.html"/>
       <url>/posts/8b1bf3f8.html</url>
       
